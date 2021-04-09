@@ -3,10 +3,20 @@
 # Workflow is to get figures as close to how we want them to look in R, then add titles, labels and such in Illustrator.
 # Script below generates the vector graphics that we then import into Illustrator. 
 
+# SSRP April 2021
+# directories updated to facilitate new TIER folder organization
+
+
+# uncomment line below and add your directory (direct to the folder prior to the TIER subfolders: command_rep, documents_rep, etc.)
+#setwd(*YOUR_DIRECTORY*/SSRP_McGuirk_Burke_2020_JPE/)
+
 rm(list=ls())
 library(lfe)
 library(readstata13)
 
+# if packages are not installed, install them by uncommenting the lines below
+#install.packages('lfe')
+#install.packages('readstata13')
 
 # function to generate lags. data need to be sorted first, very impt! this is legacy, better implementations in data.table now..
 shift <- function(x,shift_by,y) {
@@ -106,7 +116,7 @@ effOutput <- eff
 effs <- c(-.0046,.0095,.0023,.0072)  # main effects from baseline models
 lwd  = 1
 lc = "grey"
-pdf(file="output_rep/plots/Figure4.pdf",width=8,height=8,useDingbats = F)
+pdf(file="command_rep/analysis/output_rep/plots/Figure4.pdf",width=8,height=8,useDingbats = F)
 par(mfrow=c(2,2),mar=c(2,3,2,1))
 
 # Factor conflict, PPI

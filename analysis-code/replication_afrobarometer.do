@@ -1,6 +1,9 @@
 
-global dir "/Volumes/GoogleDrive/My Drive/Food Fights/4jpe_revisions/FINAL_docs/JPE_replication" 
-global output "$dir/output_rep/tables" 
+*Set directory (direct to the folder prior to the TIER subfolders: command_rep, documents_rep, etc.)
+*In the example below, the folder prior to the TIER subfolders is called SSRP_McGuirk_Burke_2020_JPE
+
+global dir "*your directory/SSRP_McGuirk_Burke_2020_JPE*" 
+global output "$dir/command_rep/analysis/output_rep/tables" 
 
 
 use "$dir/input_rep/afro_data.dta", clear

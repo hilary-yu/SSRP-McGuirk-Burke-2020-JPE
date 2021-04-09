@@ -3,6 +3,13 @@
 # Workflow is to get figures as close to how we want them to look in R, then add titles, labels and such in Illustrator.
 # Script below generates the vector graphics that we then import into Illustrator. 
 
+# SSRP April 2021
+# directories updated to facilitate new TIER folder organization
+
+
+# uncomment line below and add your directory (direct to the folder prior to the TIER subfolders: command_rep, documents_rep, etc.)
+#setwd(*YOUR_DIRECTORY*/SSRP_McGuirk_Burke_2020_JPE/)
+
 rm(list=ls())
 library(lfe)
 library(tidyverse)
@@ -71,7 +78,7 @@ for (y in c("ucdp_10","acled_riot_67")) {
   if (y=="ucdp_10") {outFactor <- out} else {outOutput <- out}
 }
 
-pdf(file="output_rep/plots/Figure6b.pdf",height=5,width=10,useDingbats = F)
+pdf(file="command_rep/analysis/output_rep/plots/Figure6b.pdf",height=5,width=10,useDingbats = F)
 par(mfrow=c(1,2), mar=c(4,4,1,1))
 out <- outFactor
 nn <- 1:dim(out)[1]
@@ -125,7 +132,7 @@ plotcumul <- function(toplot,name) {
   axis(1,at=0:5,labels = c("own","0-100","100-200","200-300","300-400","400-500"))
 }
 
-pdf(file="output_rep/plots/Figure6a.pdf",height=5,width=10,useDingbats = F)
+pdf(file="command_rep/analysis/output_rep/plots/Figure6a.pdf",height=5,width=10,useDingbats = F)
 par(mfrow=c(1,2), mar=c(4,4,1,1))
 plotcumul(outFactor,"Factor conflict, PPI")
 plotcumul(outOutput,"Output conflict, PPI")

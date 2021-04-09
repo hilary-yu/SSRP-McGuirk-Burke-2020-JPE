@@ -7,8 +7,11 @@ set maxvar 15000
 set matsize 10000
 set emptycells drop, permanently
 
-global dir "*your directory*" 
-global output "$dir/output_rep/tables" 
+*Set directory (direct to the folder prior to the TIER subfolders: command_rep, documents_rep, etc.)
+*In the example below, the folder prior to the TIER subfolders is called SSRP_McGuirk_Burke_2020_JPE
+
+global dir "*your directory/SSRP_McGuirk_Burke_2020_JPE*" 
+global output "$dir/command_rep/analysis/output_rep/tables" 
 
 ssc install sutex
 ssc install reghdfe

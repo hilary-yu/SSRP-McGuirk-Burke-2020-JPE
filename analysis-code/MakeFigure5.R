@@ -3,10 +3,20 @@
 # Workflow is to get figures as close to how we want them to look in R, then add titles, labels and such in Illustrator.
 # Script below generates the vector graphics that we then import into Illustrator. 
 
+# SSRP April 2021
+# directories updated to facilitate new TIER folder organization
+
+
+# uncomment line below and add your directory (direct to the folder prior to the TIER subfolders: command_rep, documents_rep, etc.)
+#setwd(*YOUR_DIRECTORY*/SSRP_McGuirk_Burke_2020_JPE/)
+
 rm(list=ls())
 library(lfe)
 library(tidyverse)
 library(readstata13)
+
+# if packages are not installed, install them by uncommenting the lines below
+#install.packages('tidyverse')
 
 
 # read in and organize data
@@ -94,7 +104,7 @@ options(warn=oldwarn)
 regsOutput <- list(llF0,llF1)  #put lists together for easy plotting
 
 
-pdf(file="output_rep/plots/Figure5a.pdf",height=6,width=8,useDingbats = F)
+pdf(file="command_rep/analysis/output_rep/plots/Figure5a.pdf",height=6,width=8,useDingbats = F)
 par(mfrow=c(2,2), mar=c(4,4,1,1))
 
 rr <- regsFactor[[1]]
@@ -177,7 +187,7 @@ plotindividual <- function(toplot,lag=-5,lead=2,j=1) {
 
 
 f=2; j=5
-pdf(file="output_rep/plots/Figure5b.pdf",height=6,width=8,useDingbats = F)
+pdf(file="command_rep/analysis/output_rep/plots/Figure5b.pdf",height=6,width=8,useDingbats = F)
 par(mfrow=c(2,2), mar=c(4,4,1,1))
 plotindividual(regsFactor[[2]][[6]],lag=j,lead=f,j=3)  #j=3 is PPI, j=1 is CPI based on how lists were generated
 plotindividual(regsFactor[[2]][[6]],lag=j,lead=f,j=1)
