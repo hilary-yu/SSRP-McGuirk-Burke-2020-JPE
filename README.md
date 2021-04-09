@@ -6,6 +6,28 @@ Datasets for reproduction have been deposited at the Open Science Framework: htt
 
 The SSRP reproduction attempt associated with the creation of this repository can be found here: https://www.socialsciencereproduction.org/reproductions/f788f62c-cf96-4f81-897f-d0dd412d30be/index
 
+As part of the SSRP attempt to increase reproducibility, the reproduction package was re-organized to follow the TIER protocol and thus, if downloaded from the OSF link above, consists of the following:
+
+```
+command_rep
+documents_rep
+input_rep
+raw_rep
+```
+
+command_rep currently contains the analysis code. Data cleaning code is currently missing for this reproduction package, but would be added as a subfolder to command_rep.
+
+documents_rep contains the final paper and appendix and the original README file.
+
+input_rep contains analysis data files. 
+
+raw_rep currently contains a subset of the original (raw) data files, an in-progress metadata guide and supplementary metadata documents. Future additions of raw data files should be deposited here.
+
+**This GitHub repository is currently envisioned to provide version control for any edits made to code files (cleaning or analysis) that would go under command_rep.**
+
+<br>
+<br>
+
 ## Original README file [below] 
 *From the replication package provided by the authors, with the published article*
 
